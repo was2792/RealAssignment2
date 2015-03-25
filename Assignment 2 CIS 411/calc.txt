@@ -1,0 +1,101 @@
+<html>
+<head> 
+<link href="calcstyle.css">
+</head>
+
+
+<body><center>
+<div class="box" style="color:gray">
+<div class="display">
+<div class="keys">
+
+
+<input name="result" type="text" readonly size="18" style="width:210px; height:33px;">
+<br>
+
+
+<input type="button" name "clear" value="CE" onClick="runclear()" style="width:105px; height:33px" />
+<input type="button" name "sign" value="+/-" onClick="runsign()" style="width:50px; height:33px;" />
+<input type="button" name "percent" value="%" onClick="runpercent()" style="width:50px; height:33px;" />
+<br>
+<input type="button" name "7" value="7" onClick="run7()" style="width:50px; height:33px;" />
+<input type="button" name "8" value="8" onClick="run8()" style="width:50px; height:33px;" />
+<input type="button" name "9" value="9" onClick="run9()" style="width:50px; height:33px;" />
+<input type="button" name "divide" value="/" onClick="rundivide()" style="width:50px; height:33px;" />
+<br>
+<input type="button" name "4" value="4" onClick="run4()" style="width:50px; height:33px;" />
+<input type="button" name "5" value="5" onClick="run5()" style="width:50px; height:33px;" />
+<input type="button" name "6" value="6" onClick="run6()" style="width:50px; height:33px;" />
+<input type="button" name "multiply" value="X" onClick="runmultiply()" style="width:50px; height:33px;" />
+<br>
+<input type="button" name "1" value="1" onclick="run1()" style="width:50px; height:33px;" />
+<input type="button" name "2" value="2" onClick="run2()" style="width:50px; height:33px;" />
+<input type="button" name "3" value="3" onClick="run3()" style="width:50px; height:33px;" />
+<input type="button" name "minus" value="-" onClick="runminus()" style="width:50px; height:33px;" />
+<br>
+<input type="button" name "0" value="0" onClick="run0()" style="width:50px; height:33px;" />
+<input type="button" name "period" value="." onClick="runperiod()" style="width:50px; height:33px;" />
+<input type="button" name "calc" value="=" onClick="evalu()" style="width:50px; height:33px;" />
+<input type="button" name "plus" value="+" onClick="runplus()" style="width:50px; height:33px;" />
+
+
+</div>
+</div>
+</div>
+
+<script>
+var answer = document.calc.output.value
+
+function run0()
+	{document.calc.result.value += "0";}
+function run1()
+	{document.calc.result.value += "1";}
+function run2()
+	{document.calc.result.value += "2";}
+function run3()
+	{document.calc.result.value += "3";}
+function run4()
+	{document.calc.result.value += "4";}
+function run5()
+	{document.calc.result.value += "5";}
+function run6()
+	{document.calc.result.value += "6";}
+function run7()
+	{document.calc.result.value += "7";}
+function run8()
+	{document.calc.result.value += "8";}
+function run9()
+	{document.calc.result.value += "9";}
+function runclear()
+	{document.calc.result.value = "";}
+function runsign()
+	{ var alex = "-"+result
+		if (result > 0)
+		{ 
+			document.calc.result.value = "alex";}
+
+
+	}
+function runpercent()
+	{document.calc.result.value = "";}
+function runplus()
+	{document.calc.result.value += "+";}
+function runminus()
+	{document.calc.result.value += "-";}
+function runmultiply()
+	{document.calc.result.value += "x";}
+function rundivide()
+	{document.calc.result.value += "/";}
+function runperiod()
+	{document.calc.result.value += ".";}
+function evalu()
+	{
+		var evalo = eval(document.calc.result.value)
+
+		document.calc.result.value = evalo;
+	}
+
+</script>
+</body>
+</head>
+</html>

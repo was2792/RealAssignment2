@@ -1,0 +1,64 @@
+<html>
+<head>
+<link href="calcstyle.css" type="text/css" rel="stylesheet">
+<body>
+<h1>Let us know what you think!</h1>
+<div class="survey">
+
+<form id="commentform">
+First Name:<br>
+<input type="text" id="firstname">
+<br>
+Last Name:<br>
+<input type="text" id="lastname">
+<br>
+Email Address:<br>
+<input type="text" id="email">
+<br>
+Please add comments here:<br>
+<textarea rows="5" cols="45" id="comment">
+</textarea>
+<br>
+<br>
+<input type="submit" value="Submit" onClick="commentcheck(); validateemail();"/>
+</form>
+
+
+<script type="text/javascript">
+function submitform()
+{
+document.survey.submit();
+}
+
+function commentcheck()
+{
+var check = document.getElementById("comment").value.trim();
+
+if(check == "")
+{
+alert('You must add a comment!');
+document.getElementById("comment").focus();
+return false
+}
+}
+
+function validateemail() {
+    var mail = document.forms["commentform"]["email"].value;
+    var atpos = mail.indexOf("@");
+    var dotpos = mail.lastIndexOf(".");
+    if (atpos< 1 || dotpos<atpos+2 || dotpos+2>=mail.length) {
+        alert("Not a valid e-mail address");
+        return false;
+    }
+}
+</script>
+</div>
+<div class="links">
+
+
+<a class="faqlink" href="calc.html">Click here to return to the calculator!</a>
+</div>
+
+</body>
+
+</html>
